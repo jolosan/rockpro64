@@ -15,8 +15,8 @@ Flash the downloaded image into the eMMC module with [etcher](https://www.balena
 Put the eMMC into the board and plug the power connector, and wait 1 minute.
 
 ## 2. Connecting to the machine
-Once started you can connect via SSH (first you should know the IP address the router has assigned it) using the user/password rockpro64.
-The first time you login it will ask you to change the rocpro64 user password.
+Once started you can connect via SSH (first you should know the IP address the router has assigned it) using the user/password rock64.
+The first time you login it will ask you to change the rock64 user password.
 
 ## 3. Checking for updates
 Is one of the things I use to do:
