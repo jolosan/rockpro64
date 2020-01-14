@@ -18,3 +18,33 @@ $ sudo docker run hello-world
 ```
 
 Now follow the [Post-installation steps for Linux](https://docs.docker.com/install/linux/linux-postinstall/)
+
+# Docker Compose
+Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a YAML file to configure your application’s services. Then, with a single command, you create and start all the services from your configuration.
+Using Compose is basically a three-step process:
+
+* Define your app’s environment with a Dockerfile so it can be reproduced anywhere.
+* Define the services that make up your app in docker-compose.yml so they can be run together in an isolated environment.
+* Run docker-compose up and Compose starts and runs your entire app.
+
+```
+sudo apt install docker-compose
+```
+A **docker-compose.yml** looks like this:
+```
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+    - "5000:5000"
+    volumes:
+    - .:/code
+    - logvolume01:/var/log
+    links:
+    - redis
+  redis:
+    image: redis
+volumes:
+  logvolume01: {}
+```

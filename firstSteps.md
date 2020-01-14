@@ -51,4 +51,22 @@ Restart both networking and resolvconf to see the change take effect.
 # systemctl restart resolvconf
 ```
 
+## 5. Adjust fan RPM
+With the following command the RPM are adjusted at the value of 50.
+```
+bash -c 'echo 50 > /sys/class/hwmon/hwmon0/pwm1'
+```
 
+## 6. Configure system  locale
+The system locale defines the language and country-specific setting for the programs running on your system and the shell sessions. 
+You can use locales to see the time and date, numbers, currency and other values formatted as per your language or country.
+
+```
+sudo dpkg-reconfigure locales
+```
+I have choosen es_ES.UTF-8
+
+To verify if a system locale is enabled:
+```
+sudo locale -a
+```
